@@ -7,7 +7,7 @@ df$DateTime <- strptime(paste(df$Date, df$Time), format='%Y-%m-%d %H:%M:%S')
 df <- df[df$Date >= as.Date('2007-02-01') & df$Date <= as.Date('2007-02-02'),]
 
 # Plot to png
-png(filename='plot4.png', width=480, height=480, units='px')
+png('plot4.png')
 par(mfrow=c(2,2))
 plot(df$DateTime, df$Global_active_power, type='l', xlab='', ylab='Global Active Power')
 plot(df$DateTime, df$Voltage, type='l', xlab='datetime', ylab='Voltage')
